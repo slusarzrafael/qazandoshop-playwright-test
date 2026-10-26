@@ -1,0 +1,47 @@
+{
+  "name": "qazandoshop-playwright-test",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/slusarzrafael/qazandoshop-playwright-test#readme",
+  "bugs": {
+    "url": "https://github.com/slusarzrafael/qazandoshop-playwright-test/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slusarzrafael/qazandoshop-playwright-test.git"
+  },
+  "license": "MIT",
+  "author": "Rafael Slusarz",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed --project=chromium",
+    "test:debug": "playwright test --debug --project=chromium",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:mobile": "playwright test --project=mobile-chrome --project=mobile-safari",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regressao": "playwright test --grep @regressao",
+    "test:a11y": "playwright test --grep @a11y",
+    "test:responsivo": "playwright test --grep @responsivo",
+    "test:visual": "playwright test --grep @visual",
+    "test:visual:update": "playwright test --grep @visual --update-snapshots",
+    "test:rede": "playwright test tests/rede",
+    "typecheck": "tsc -p .",
+    "report": "playwright show-report",
+    "report:allure:generate": "allure generate allure-results --clean --output allure-report",
+    "report:allure:open": "allure open allure-report"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^26.6.5",
+    "allure-commandline": "^2.46.1",
+    "allure-playwright": "^3.14.0",
+    "dotenv": "^18.0.9",
+    "typescript": "^7.0.2"
+  }
+}
